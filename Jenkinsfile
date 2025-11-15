@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "🔹 Checking out repository..."
-                git branch: 'master', url: 'https://github.com/Ahmedlebshten/Jenkins-Pipeline-Project'
+                git branch: 'main', url: 'https://github.com/MOHAMADFAWZI-911/jenkins-pipeline'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                 sh 'terraform plan -out=tfplan'
             }
         }
-/*
+
         stage('Terraform Apply') {
             steps {
                 echo "🔹 Applying Terraform..."
@@ -36,7 +36,7 @@ pipeline {
                 echo "✅ Infrastructure deployed successfully!"
             }
         }
-*/
+/*
         stage('Terraform Destroy') {
             steps {
                 echo "🗑️ Destroying Terraform infrastructure..."
@@ -45,7 +45,7 @@ pipeline {
             }
         }
     }
-
+*/
     post {
         success {
             echo "🎉 Pipeline completed successfully!"
