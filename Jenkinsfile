@@ -44,8 +44,8 @@ pipeline {
                 echo "🔥 Infrastructure destroyed successfully!"
             }
         }
-    }
-*/
+   */ }
+
     post {
         success {
             echo "🎉 Pipeline completed successfully!"
