@@ -25,7 +25,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 echo "🔹 Creating Terraform plan..."
-                sh 'terraform plan -out=tfplan'
+                sh 'terraform plan -input=false -out=tfplan'
             }
         }
 
